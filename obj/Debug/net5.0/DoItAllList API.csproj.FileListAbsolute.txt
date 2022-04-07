@@ -27,3 +27,4 @@ C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\obj\Debug\net5.0\DoItAll
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\obj\Debug\net5.0\ref\DoItAllList API.dll
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\obj\Debug\net5.0\DoItAllList API.pdb
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\obj\Debug\net5.0\DoItAllList API.genruntimeconfig.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\package-lock.json
