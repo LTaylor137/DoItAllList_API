@@ -1,10 +1,10 @@
 using System.Text.Json.Serialization;
 
-namespace DoItAllList_API
+namespace DoItAllList_API.Models
 
 {
 
-    public class ListItem
+    public class LocalListItem
     {
 
         [JsonPropertyName("ListItemID")]
@@ -17,13 +17,13 @@ namespace DoItAllList_API
         public bool isChecked { get; set; }
 
 
-        public ListItem() { }
+        public LocalListItem() { }
 
-        public ListItem(int _ListItemID, string _Text)
+        public LocalListItem(int _ListItemID, string _Text)
         {
             this.ListItemID = _ListItemID;
             this.Text = _Text;
-            this.isChecked = false;
+            // this.isChecked = false;
         }
     }
 

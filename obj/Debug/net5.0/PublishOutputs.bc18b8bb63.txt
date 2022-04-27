@@ -1,0 +1,11 @@
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\DoItAllList API.exe
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\appsettings.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\DoItAllList API.deps.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\DoItAllList API.runtimeconfig.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\DoItAllList API.pdb
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\Microsoft.OpenApi.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList API\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

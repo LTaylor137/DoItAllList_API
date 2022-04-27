@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList API\\DoItAllList API.csproj": {}
+    "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\DoItAllList API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList API\\DoItAllList API.csproj": {
+    "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\DoItAllList API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList API\\DoItAllList API.csproj",
+        "projectUniqueName": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\DoItAllList API.csproj",
         "projectName": "DoItAllList API",
-        "projectPath": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList API\\DoItAllList API.csproj",
+        "projectPath": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\DoItAllList API.csproj",
         "packagesPath": "C:\\Users\\Lach\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList API\\obj\\",
+        "outputPath": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lach\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             }
           },
           "imports": [

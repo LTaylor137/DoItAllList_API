@@ -34,3 +34,41 @@
 //   }
   
 // }
+
+
+using System.Text.Json.Serialization;
+
+namespace DoItAllList_API.Models
+
+{
+
+    public class LocalListt
+    {
+
+        [JsonPropertyName("ListID")]
+        public int ListID { get; set; }
+
+        [JsonPropertyName("ListTitle")]
+        public string ListTitle { get; set; }
+
+        [JsonPropertyName("ListItem")]
+        public LocalListItem[] ListItem { get; set; }
+
+        [JsonPropertyName("ListColour")]
+        public string ListColour { get; set; }
+
+
+        public LocalListt() { }
+
+        public LocalListt(int _ListID, string _ListTitle, LocalListItem[] _ListItem, string _ListColour)
+        {
+            this.ListID = _ListID;
+            this.ListTitle = _ListTitle;
+             this.ListItem = _ListItem;
+            this.ListColour = _ListColour;
+        }
+    }
+
+}
+
+
