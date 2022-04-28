@@ -25,7 +25,9 @@ namespace DoItAllList_API.Controllers
         private readonly IConfiguration configuration;
         string connectionString = "";
 
-        public List<GetListItemDBRequest> ListFromDB = new List<GetListItemDBRequest>();
+        public List<GetListItemRequest> ListItemsFromDB = new List<GetListItemRequest>();
+
+        public List<List> EmptyListsFromDB = new List<List>();
 
         public List<LocalListt> ListOfListsFromDB = new List<LocalListt>();
 
@@ -39,6 +41,15 @@ namespace DoItAllList_API.Controllers
             // use this when working from AWS hosted database 
             // connectionString = this.configuration.GetSection("ConnectionStrings").GetSection("DBConnectionString").Value;
         }
+
+
+
+
+
+        // ======================================================================================================================================
+        // ================================================   LOCAL API CALLS FOR REFERENCE    ==================================================
+        // ======================================================================================================================================
+
 
 
         //this is a version of the list which exists only in the API.
@@ -63,25 +74,36 @@ namespace DoItAllList_API.Controllers
             return List;
         }
 
-        // GET DoItAllList/GetList
-        [HttpGet("GetListFromDB")]
-        public List<LocalListItem> GetListFromDB()
-        {
-            return List;
-        }
+        // PUT api/values/5
+        // [HttpPut("{id}")]
+        // public void Put(int id, [FromBody] string value)
+        // {
+        // }
+
+        // // DELETE api/values/5
+        // [HttpDelete("{id}")]
+        // public void Delete(int id)
+        // {
+        // }
+
+        // ======================================================================================================================================
+        // ================================================         DATABASE CALLS          =====================================================
+        // ======================================================================================================================================
+
+
 
         // GET DoItAllList/GetAllListItemsFromDB
         [HttpGet("GetAllListItemsFromDB")]
-        public List<GetListItemDBRequest> GetAllListItemsFromDB()
+        public List<GetListItemRequest> GetAllListItemsFromDB()
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            ListFromDB = new List<GetListItemDBRequest>();
+            ListItemsFromDB = new List<GetListItemRequest>();
 
-               string queryString = "SELECT * " +
-                                 "FROM LISTITEM LM " +
-                                 "INNER JOIN LIST LT " +
-                                 "ON LM.USERID = LT.USERID " +
-                                 "AND LM.LISTID = LT.LISTID ";
+            string queryString = "SELECT * " +
+                              "FROM LISTITEM LM " +
+                              "INNER JOIN LIST LT " +
+                              "ON LM.USERID = LT.USERID " +
+                              "AND LM.LISTID = LT.LISTID ";
 
             SqlCommand command = new SqlCommand(queryString, connection);
             Console.WriteLine(command);
@@ -92,13 +114,13 @@ namespace DoItAllList_API.Controllers
                 {
                     while (reader.Read())
                     {
-                        //add all values as a list item to ListfromDB
-                        ListFromDB.Add(
-                        new GetListItemDBRequest((int)reader[0], (int)reader[1], reader[7].ToString(), reader[8].ToString(), (int)reader[2], reader[3].ToString())
+                        //add all values as a list item to ListItemsFromDB
+                        ListItemsFromDB.Add(
+                        new GetListItemRequest((int)reader[0], (int)reader[1], reader[7].ToString(), reader[8].ToString(), (int)reader[2], reader[3].ToString())
                         );
                     };
                 };
-                return ListFromDB;
+                return ListItemsFromDB;
             }
             finally
             {
@@ -108,7 +130,7 @@ namespace DoItAllList_API.Controllers
 
         // GET DoItAllList/GetAllListItemsFromDBOfUser
         [HttpGet("GetAllListItemsFromDBOfUser")]
-        public List<GetListItemDBRequest> GetAllListItemsFromDBOfUser(int id)
+        public List<GetListItemRequest> GetAllListItemsFromDBOfUser(int id)
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -129,13 +151,13 @@ namespace DoItAllList_API.Controllers
                 {
                     while (reader.Read())
                     {
-                        //add all values as a list item to ListfromDB
-                        ListFromDB.Add(
-                        new GetListItemDBRequest((int)reader[0], (int)reader[1], reader[7].ToString(), reader[8].ToString(), (int)reader[2], reader[3].ToString())
+                        //add all values as a list item to ListItemsFromDB
+                        ListItemsFromDB.Add(
+                        new GetListItemRequest((int)reader[0], (int)reader[1], reader[7].ToString(), reader[8].ToString(), (int)reader[2], reader[3].ToString())
                         );
                     };
                 };
-                return ListFromDB;
+                return ListItemsFromDB;
             }
             finally
             {
@@ -143,15 +165,79 @@ namespace DoItAllList_API.Controllers
             }
         }
 
-        // POST api/values
+        // GET DoItAllList/GetAllListItemsAndEmptyListsFromDBOfUser
+        [HttpGet("GetAllListItemsAndEmptyListsFromDBOfUser")]
+        public List<GetListItemRequest> GetAllListItemsAndEmptyListsFromDBOfUser(int id)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string queryString1 =
+                                "SELECT LM.USERID, LM.LISTID, LM.LISTITEMID, " +
+                                "LM.TEXT, LM.ISCHECKED, LT.LISTTITLE, LT.LISTCOLOUR " +
+                                "FROM LISTITEM LM " +
+                                "INNER JOIN LIST LT " +
+                                "ON LM.USERID = LT.USERID " +
+                                "AND LM.LISTID = LT.LISTID " +
+                                "WHERE LM.USERID = @QUERYID;";
+            string queryString2 =
+                                "SELECT L.USERID, L.LISTID, " +
+                                "0 AS LISTITEMID, " +
+                                "NULL AS TEXT, " +
+                                "0 AS ISCHECKED, " +
+                                "L.LISTTITLE, " +
+                                "L.LISTCOLOUR " +
+                                "FROM LIST L " +
+                                "WHERE L.USERID = @QUERYID " +
+                                "AND L.LISTID NOT IN " +
+                                "(SELECT I.LISTID FROM LISTITEM I WHERE I.USERID = @QUERYID)";
+
+
+            SqlCommand command1 = new SqlCommand(queryString1, connection);
+            command1.Parameters.AddWithValue("@QUERYID", id);
+
+            SqlCommand command2 = new SqlCommand(queryString2, connection);
+            command2.Parameters.AddWithValue("@QUERYID", id);
+
+            connection.Open();
+            try
+            {
+                using (SqlDataReader reader = command1.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //add all values as a list item to ListItemsFromDB
+                        ListItemsFromDB.Add(
+                        new GetListItemRequest((int)reader[0], (int)reader[1], reader[5].ToString(), reader[6].ToString(), (int)reader[2], reader[3].ToString())
+                        );
+                    };
+                };
+                using (SqlDataReader reader = command2.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //add all values as a list item to ListItemsFromDB
+                        ListItemsFromDB.Add(
+                        new GetListItemRequest((int)reader[0], (int)reader[1], reader[5].ToString(), reader[6].ToString(), (int)reader[2], reader[3].ToString())
+                        );
+                    };
+                };
+                return ListItemsFromDB;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        // POST api/DoItAllList/PostListItemToDB
         [HttpPost("PostListItemToDB")]
-        public PostListItemDBRequest PostListItemToDB(NewListItem model)
+        public PostListItemRequest PostListItemToDB(CreateListItemRequest model)
         {
             string queryString = "";
-            PostListItemDBRequest ListItemR = new PostListItemDBRequest(model.UserID, model.ListID, model.ListItemID, model.Text);
+            PostListItemRequest ListItemR = new PostListItemRequest(model.UserID, model.ListID, model.ListItemID, model.Text);
 
             queryString = "INSERT INTO LISTITEM (USERID, LISTID, LISTITEMID, [TEXT], ISCHECKED) " +
-                          "VALUES (@USERID, @LISTID, @LISTITEMID, '@TEXT', 0)";
+                          "VALUES (@USERID, @LISTID, @LISTITEMID, @TEXT, 0)";
 
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -176,20 +262,170 @@ namespace DoItAllList_API.Controllers
         }
 
 
+        // POST api/DoItAllList/PostListOfListItemsToDB
+        //TODO
 
 
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        // POST api/DoItAllList/CreateNewList
+        [HttpPost("CreateNewList")]
+        public PostListRequest CreateNewList(ListRequest model)
         {
+            string queryString = "";
+            PostListRequest ListItemR = new PostListRequest(model.UserID, model.ListID, model.ListTitle, model.ListColour);
+
+            queryString = "INSERT INTO LIST (USERID, LISTID, LISTTITLE, LISTCOLOUR) " +
+                          "VALUES (@USERID, @LISTID, @LISTTITLE, @LISTCOLOUR)";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Parameters.AddWithValue("@USERID", ListItemR.UserID);
+            command.Parameters.AddWithValue("@LISTID", ListItemR.ListID);
+            command.Parameters.AddWithValue("@LISTTITLE", ListItemR.ListTitle);
+            command.Parameters.AddWithValue("@LISTCOLOUR", ListItemR.ListColour);
+
+            try
+            {
+                connection.Open();
+                var result = command.ExecuteNonQuery();
+                return ListItemR;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        // POST api/DoItAllList/UpdateListTitle
+        [HttpPut("UpdateListTitle")]
+        public PostListRequest UpdateListTitle(List model)
         {
+            string queryString = "";
+            PostListRequest ListR = new PostListRequest(model.UserID, model.ListID, model.ListTitle, model.ListColour);
+
+            queryString =   "UPDATE LIST " +
+                            "SET LISTTITLE = @LISTTITLE " +
+                            "WHERE USERID = @USERID " +
+                            "AND LISTID = @LISTID ";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Parameters.AddWithValue("@USERID", ListR.UserID);
+            command.Parameters.AddWithValue("@LISTID", ListR.ListID);
+            command.Parameters.AddWithValue("@LISTTITLE", ListR.ListTitle);
+
+            try
+            {
+                connection.Open();
+                var result = command.ExecuteNonQuery();
+                return ListR;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
+
+
+         // POST api/DoItAllList/UpdateListColour
+        [HttpPut("UpdateListColour")]
+        public PostListRequest UpdateListColour(List model)
+        {
+            string queryString = "";
+            PostListRequest ListR = new PostListRequest(model.UserID, model.ListID, model.ListTitle, model.ListColour);
+
+            queryString =   "UPDATE LIST " +
+                            "SET LISTCOLOUR = @LISTCOLOUR " +
+                            "WHERE USERID = @USERID " +
+                            "AND LISTID = @LISTID ";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Parameters.AddWithValue("@USERID", ListR.UserID);
+            command.Parameters.AddWithValue("@LISTID", ListR.ListID);
+            command.Parameters.AddWithValue("@LISTCOLOUR", ListR.ListColour);
+
+            try
+            {
+                connection.Open();
+                var result = command.ExecuteNonQuery();
+                return ListR;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+
+        // POST api/DoItAllList/DeleteListItemFromDB
+        [HttpPut("DeleteListItemFromDB")]
+        public PostListItemRequest DeleteListItemFromDB(ListItem model)
+        {
+            string queryString = "";
+            PostListItemRequest ListItemR = new PostListItemRequest(model.UserID, model.ListID, model.ListItemID, model.Text);
+
+            queryString = "DELETE FROM LISTITEM " +
+                            "WHERE USERID = @USERID " +
+                            "AND LISTID = @LISTID " +
+                            "AND LISTITEMID = @LISTITEMID";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Parameters.AddWithValue("@USERID", ListItemR.UserID);
+            command.Parameters.AddWithValue("@LISTID", ListItemR.ListID);
+            command.Parameters.AddWithValue("@LISTITEMID", ListItemR.ListItemID);
+
+            try
+            {
+                connection.Open();
+                var result = command.ExecuteNonQuery();
+                return ListItemR;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        // POST api/DoItAllList/DeleteListFromDB
+        [HttpPut("DeleteListFromDB")]
+        public PostListRequest DeleteListFromDB(DeleteListRequest model)
+        {
+            string queryString = "";
+            PostListRequest ListItemR = new PostListRequest(model.UserID, model.ListID, "x", "x");
+
+            queryString = "DELETE FROM LISTITEM " +
+                            "WHERE USERID = @USERID " +
+                            "AND LISTID = @LISTID " +
+                            "DELETE FROM LIST " +
+                            "WHERE USERID = @USERID " +
+                            "AND LISTID = @LISTID ";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Parameters.AddWithValue("@USERID", ListItemR.UserID);
+            command.Parameters.AddWithValue("@LISTID", ListItemR.ListID);
+
+            try
+            {
+                connection.Open();
+                var result = command.ExecuteNonQuery();
+                return ListItemR;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
     }
 
 }

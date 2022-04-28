@@ -3,12 +3,12 @@ using System.Text.Json.Serialization;
 namespace DoItAllList_API.Models
 
 {
-    public class NewListItem
+    public class ListRequest
     {
         public int UserID { get; set; }
         public int ListID { get; set; }
-        public int ListItemID { get; set; }
-        public string Text { get; set; }
+        public string ListTitle { get; set; }
+        public string ListColour { get; set; }
     }
 
 }

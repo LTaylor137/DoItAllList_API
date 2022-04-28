@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 namespace DoItAllList_API.Models
 
 {
-    public class PostListItemDBRequest
+    public class PostListItemRequest
     {
         [JsonPropertyName("UserID")]
         public int UserID { get; set; }
@@ -17,7 +17,7 @@ namespace DoItAllList_API.Models
         [JsonPropertyName("Text")]
         public string Text { get; set; }
 
-        public PostListItemDBRequest(int _UserID, int _ListID, int _ListItemID, string _Text)
+        public PostListItemRequest(int _UserID, int _ListID, int _ListItemID, string _Text)
         {
             this.UserID = _UserID;
             this.ListID = _ListID;
