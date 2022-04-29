@@ -42,7 +42,7 @@ namespace DoItAllList_API.Models
 
 {
 
-    public class LocalListt
+    public class LocalList
     {
 
         [JsonPropertyName("ListID")]
@@ -58,9 +58,9 @@ namespace DoItAllList_API.Models
         public string ListColour { get; set; }
 
 
-        public LocalListt() { }
+        public LocalList() { }
 
-        public LocalListt(int _ListID, string _ListTitle, LocalListItem[] _ListItem, string _ListColour)
+        public LocalList(int _ListID, string _ListTitle, LocalListItem[] _ListItem, string _ListColour)
         {
             this.ListID = _ListID;
             this.ListTitle = _ListTitle;

@@ -3,10 +3,12 @@ using System.Text.Json.Serialization;
 namespace DoItAllList_API.Models
 
 {
-    public class DeletexxxListRequest
+
+    public class User
     {
         public int UserID { get; set; }
-        public int ListID { get; set; }
+        public string Username { get; set; }
 
     }
+
 }

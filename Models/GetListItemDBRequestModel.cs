@@ -28,7 +28,7 @@ namespace DoItAllList_API.Models
         [JsonPropertyName("isChecked")]
         public bool isChecked { get; set; }
 
-        public GetListItemRequest(int _UserID, int _ListID, string _ListTitle, string _ListColour, int _ListItemID, string _Text)
+        public GetListItemRequest(int _UserID, int _ListID, string _ListTitle, string _ListColour, int _ListItemID, string _Text, bool _isChecked)
         {
             this.UserID = _UserID;
             this.ListID = _ListID;
@@ -36,6 +36,7 @@ namespace DoItAllList_API.Models
             this.ListColour = _ListColour;
             this.ListItemID = _ListItemID;
             this.Text = _Text;
+            this.isChecked = _isChecked;
         }
     }
 
