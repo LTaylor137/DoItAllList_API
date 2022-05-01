@@ -25,9 +25,7 @@ namespace DoItAllList_API.Controllers
         private readonly IConfiguration configuration;
         string connectionString = "";
 
-
         public List<GetUserDBRequest> UsersFromDB = new List<GetUserDBRequest>();
-
 
         public List<GetListItemRequest> ListItemsFromDB = new List<GetListItemRequest>();
 
@@ -38,10 +36,10 @@ namespace DoItAllList_API.Controllers
         public DoItAllListController(IConfiguration _configuration)
         {
             // use this when working from Local machine database 
-            connectionString = _configuration.GetSection("ConnectionStrings").GetSection("LocalConnectionString").Value;
+            // connectionString = _configuration.GetSection("ConnectionStrings").GetSection("LocalConnectionString").Value;
 
             // use this when working from AWS hosted database 
-            // connectionString = this.configuration.GetSection("ConnectionStrings").GetSection("DBConnectionString").Value;
+            connectionString = _configuration.GetSection("ConnectionStrings").GetSection("DBConnectionString").Value;
         }
 
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LLSlmyUx0pfj33Z5v6UYsVbbZ5OJd50PM1axFH0tRMH5Aazjv9bNUuDTeDkrLwv8P5U4XUr0wbEXk1Xy3ctFhw==",
+  "dgSpecHash": "tIc6YA9RV8EcPWmz9Ah4UeSU8mmc5VICtbdwc1EccKOiAzvTa3eRJwHLbuxZjxQZIoZHmBxSDxA8mvITdv1K9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lach\\Desktop\\Personal Projects\\DoItAllList\\DoItAllList API\\DoItAllList API.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,9 @@
     "C:\\Users\\Lach\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Lach\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\Lach\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Lach\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Lach\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Lach\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lach\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
   ],
   "logs": []
 }
