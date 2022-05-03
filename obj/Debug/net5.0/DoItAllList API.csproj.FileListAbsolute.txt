@@ -35,3 +35,6 @@ C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Debug\ne
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Debug\net5.0\DoItAllList API.genruntimeconfig.cache
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Debug\net5.0\package-lock.json
 C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Debug\net5.0\refint\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Debug\net5.0\aws-windows-deployment-manifest.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Debug\net5.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Debug\net5.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll

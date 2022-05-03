@@ -1,0 +1,23 @@
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\DoItAllList API.exe
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\appsettings.Development.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\appsettings.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\aws-windows-deployment-manifest.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\package-lock.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\DoItAllList API.deps.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\DoItAllList API.runtimeconfig.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\DoItAllList API.pdb
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Microsoft.OpenApi.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\System.Data.SqlClient.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\runtimes\win-x64\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\runtimes\win-x86\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

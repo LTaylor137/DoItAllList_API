@@ -1,0 +1,39 @@
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\appsettings.Development.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\appsettings.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\aws-windows-deployment-manifest.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\package-lock.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\DoItAllList API.exe
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\DoItAllList API.deps.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\DoItAllList API.runtimeconfig.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\DoItAllList API.pdb
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\System.Data.SqlClient.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.csproj.AssemblyReference.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.AssemblyInfoInputs.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.AssemblyInfo.cs
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.csproj.CoreCompileInputs.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\scopedcss\bundle\DoItAllList API.styles.css
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.csproj.CopyComplete
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\refint\DoItAllList API.dll
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.pdb
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\DoItAllList API.genruntimeconfig.cache
+C:\Users\Lach\Desktop\Personal Projects\DoItAllList\DoItAllList API\obj\Release\net6.0\ref\DoItAllList API.dll

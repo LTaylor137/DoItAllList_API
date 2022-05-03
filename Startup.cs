@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 
 namespace DoItAllList_API
@@ -48,6 +49,10 @@ namespace DoItAllList_API
                     // .AllowCredentials();
                 });
             });
+
+//https://stackoverflow.com/questions/23771923/elasticbeanstalk-deployment-error-command-hooks-directoryhooksexecutor-py-p
+            services.AddHttpsRedirection(o => o.HttpsPort = 443);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,6 +78,12 @@ namespace DoItAllList_API
             {
                 endpoints.MapControllers();
             });
+
+            // app.Run(context =>
+            // {
+            //     return context.Response.WriteAsync("Hello from ASP.NET Core!");
+            // });
+            
         }
     }
 }
