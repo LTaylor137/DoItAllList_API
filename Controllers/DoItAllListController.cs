@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DoItAllList_API.Models;
-using System.Data.SqlClient;
+// using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
 

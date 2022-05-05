@@ -43,10 +43,10 @@ namespace DoItAllList_API
                     options
                         .AllowAnyOrigin()
                         .AllowAnyMethod()
-                        .AllowAnyHeader();
+                        .AllowAnyHeader()
                     // I had to disable this to stop the "NullInjectorError: No provider for HttpClient!" error.
                     // this is not required if we are using .AllowAnyOrigin()
-                    // .AllowCredentials();
+                    .AllowCredentials();
                 });
             });
 
@@ -68,7 +68,7 @@ namespace DoItAllList_API
             app.UseCors();
 
             // I had to disable this. It would not send a request back through https://localhost:5001 otherwise.
-            // app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
